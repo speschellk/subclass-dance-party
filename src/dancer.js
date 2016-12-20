@@ -16,7 +16,13 @@ MakeDancer.prototype.step = function() {
   // it just schedules the next step
   // console.log('dancer step test');
   // console.log('this is ' + this);
-  setTimeout(this.step, this.timeBetweenSteps);
+  // console.log(MakeDancer.prototype.step);
+  // console.log(this.timeBetweenSteps);
+  setTimeout(function() {
+    MakeDancer.prototype.step.call(this); 
+  }
+  , this.timeBetweenSteps);
+
 };
 
 // var dancer = new MakeDancer(10, 10, 5);
@@ -37,7 +43,7 @@ MakeDancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
-  console.log('node is ' + this.$node);
+  // console.log('node is ' + this.$node);
 };
 
 // console.log('dancer is ' + dancer);
