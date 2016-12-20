@@ -16,17 +16,21 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
 MakeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-  var blinkyDan = this;
+  //var blinkyDan = this;
+  
+  var context = this;
 
-  console.log(this, "before bind this to blinky dancer");
-
-  setTimeout(
-    function() {
-      console.log(blinkyDan, "this inside the set time out anon fun");
-      MakeBlinkyDancer.prototype.step.bind(blinkyDan);
-    }
+  setTimeout(this.step.bind(context)
+    // function() {
+    //   console.log('hi');
+    //   //console.log(blinkyDan, 'this inside the set time out anon fun');
+    //   this.step.bind(context);
+    // }
   , this.timeBetweenSteps);
-
+  // setTimeout(
+  //   MakeDancer.prototype.step
+  //   //MakeBlinkyDancer.prototype.step.bind(blinkyDan);
+  // , this.timeBetweenSteps);
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {
