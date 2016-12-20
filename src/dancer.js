@@ -3,33 +3,30 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.setPosition(top, left);
+  this.step();
+
+  // use jQuery to create an HTML <span> tag
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
+
 };
 
 MakeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
+  var blinkyDan = this;
 
-  console.log('you are here when you call the step function');
-  console.log('this is ', this);
+  console.log(this, "before bind this to blinky dancer");
 
-  var help = function () {
-    alert('help');
-  };
+  setTimeout(
+    function() {
+      console.log(blinkyDan, "this inside the set time out anon fun");
+      MakeBlinkyDancer.prototype.step.bind(blinkyDan);
+    }
+  , this.timeBetweenSteps);
 
-  setInterval(help, 1000);
-
-  console.log('we are here!');
-
-  // setTimeout(
-  //   // make this part refer to blinky's step
-  //   this.$node.toggle()
-  //   // MakeDancer.prototype.step.call(this); 
-  // , this.timeBetweenSteps);
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {

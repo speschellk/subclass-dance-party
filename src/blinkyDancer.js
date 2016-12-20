@@ -2,7 +2,6 @@ var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
   console.log('tests');
-
   // this.oldStep = this.step;
   // this.step = MakeBlinkyDancer.prototype.step;
 
@@ -16,8 +15,8 @@ MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
 MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 
 MakeBlinkyDancer.prototype.step = function() {
-
   console.log('finally called the bugger!');
+  console.log('this.$node is ', this.$node); 
   // call the old version of step at the beginning of any call to this new version of step
   MakeDancer.prototype.step.call(this);
   //console.log(MakeDancer.prototype.step);
@@ -26,6 +25,7 @@ MakeBlinkyDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
 
   // other effects you can use on a jQuery-wrapped html tag.
+  console.log('this.$node is ', this.$node);
   this.$node.toggle();
-  console.log('this.$node is ' + this.$node);
+  
 };
