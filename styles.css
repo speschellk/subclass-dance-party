@@ -1,10 +1,17 @@
 body, html{
   height:100%;
 }
+
+html { 
+  background: url("discospacesloth.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body{
   margin: 0px;
-  background: #444 url("discospacesloth.jpg") no-repeat fixed center;
-  background-size: 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -22,8 +29,10 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  background-image: url("sloths/creepsloth.png");
-  /*border:10px solid red;
-  border-radius:10px;*/
   position:absolute;
+}
+
+img {
+  height: 2000px;
+  width: 2000px;
 }
