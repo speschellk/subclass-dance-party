@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background: #444 url("discospacesloth.jpg") no-repeat fixed center;
+  background-image: url("discospacesloth.jpg");
+  background-repeat: no-repeat;
+  background-color:#444;
   background-size: 100%;
   font-size: 18px;
 }
@@ -22,8 +24,7 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  background-image: url("sloths/creepsloth.png");
-  /*border:10px solid red;
-  border-radius:10px;*/
+  border:10px solid red;
+  border-radius:10px;
   position:absolute;
 }

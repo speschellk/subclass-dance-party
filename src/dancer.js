@@ -6,37 +6,15 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   this.setPosition(top, left);
   this.step();
-
-  // use jQuery to create an HTML <span> tag
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
-
 };
 
-MakeDancer.prototype.step = function() {
-  // the basic dancer doesn't do anything interesting at all on each step,
-  // it just schedules the next step
-  //var blinkyDan = this;
-  
+MakeDancer.prototype.step = function() { 
   var context = this;
 
-  setTimeout(this.step.bind(context)
-    // function() {
-    //   console.log('hi');
-    //   //console.log(blinkyDan, 'this inside the set time out anon fun');
-    //   this.step.bind(context);
-    // }
-  , this.timeBetweenSteps);
-  // setTimeout(
-  //   MakeDancer.prototype.step
-  //   //MakeBlinkyDancer.prototype.step.bind(blinkyDan);
-  // , this.timeBetweenSteps);
+  setTimeout(this.step.bind(context), this.timeBetweenSteps);
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {
-  // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-
   var styleSettings = {
     top: top,
     left: left
