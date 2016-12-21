@@ -12,7 +12,8 @@ html {
 
 body{
   margin: 0px;
-  font-size: 18px;
+  font-size: 30px;
+  font-family: "RapidSloths", Helvetica, sans-serif;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -28,15 +29,17 @@ audio {
   left: 0;
 }
 .title, .addDancerButton, .lineUpButton {
-  padding:5px 12px;
+  padding:8px 25px;
   float:right;
+  text-decoration: none;
 }
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:40px;
+  background-color: #333;
 }
 .title{
-  background-color: #777;
+  padding-top: 5px;
+  font-size: 40px;
 }
 .dancer{
   position:absolute;
