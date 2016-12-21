@@ -21,6 +21,12 @@ img {
   height: 400px;
   width: 400px;
 }
+audio {
+  position: absolute;
+  z-index: 1;
+  top: 97%;
+  left: 0;
+}
 .title, .addDancerButton, .lineUpButton {
   padding:5px 12px;
   float:right;
