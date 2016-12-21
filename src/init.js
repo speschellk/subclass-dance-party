@@ -31,14 +31,20 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
 
-
-  $('.lineUpButton').on('click', function(event) {
+  var lineUp = function() {
     for (var i = 0; i < window.dancers.length; i++) {
       // call lineUp method on each instance
+      console.log(window.dancers[i].$node);
       window.dancers[i].$node.stop();
-      window.dancers[i].$node.animate({top: '70%'});
+      var node = window.dancers[i].$node;
+      
+      if (node['0'].innerHTML === '<img class="sly" src="assets/sloths/knowingSloth.png">') {
+        node.animate({marginTop: '+=900px'}, {duration: 200});
+      } else {
+        window.dancers[i].$node.animate({top: '70%'});
+      }
     }
-  });
+  };
+
+  $('.lineUpButton').on('click', lineUp);
 });
-
-
