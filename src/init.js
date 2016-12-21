@@ -28,15 +28,15 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
 
-  // $('.lineUpButton').on('click', function(event) {
-  //   console.log('lineUpButton firing');
-  //   for (var i = 0; i < window.dancers.length; i++) {
-  //     // call lineUp method on each instance
-  //     console.log('in the for loop');
-  //     window.dancers[i].animate({top: '10px'});
-  //   }
-  // });
+  $('.lineUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      // call lineUp method on each instance
+      window.dancers[i].$node.stop();
+      window.dancers[i].$node.animate({top: '70%'});
+    }
+  });
 });

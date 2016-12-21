@@ -1,8 +1,6 @@
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  console.log(this.$node);
   this.$node.append('<img src="/Users/student/Desktop/hrsf53-subclass-dance-party/assets/sloths/creepsloth.png">');
-  console.log(this.$node);
 };
 
 MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
