@@ -14,6 +14,6 @@ MakeRocketDancer.prototype.constructor = MakeRocketDancer;
 
 MakeRocketDancer.prototype.step = function() {
   MakeDancer.prototype.step.call(this);
-  
-  this.$node.animate({left: '-700'});
+
+  this.$node.animate({left: '-700'}, {duration: 500});
 };
