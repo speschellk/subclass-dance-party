@@ -6,7 +6,7 @@ var MakeRocketDancer = function(top, left, timeBetweenSteps) {
   }
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.left = '0';
-  this.$node.append('<img class="narwhal" src="/Users/student/Desktop/hrsf53-subclass-dance-party/assets/sloths/narwhal.png">');
+  this.$node.append('<img class="narwhal" src="assets/sloths/narwhal.png">');
 };
 
 MakeRocketDancer.prototype = Object.create(MakeDancer.prototype);

@@ -1,7 +1,7 @@
 var MakeHulaDancer = function (top, left, timeBetweenSteps) {
   top = '60%';
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append('<img src="/Users/student/Desktop/hrsf53-subclass-dance-party/assets/sloths/hoopsloth.png">');
+  this.$node.append('<img src="assets/sloths/hoopsloth.png">');
 };
 
 MakeHulaDancer.prototype = Object.create(MakeDancer.prototype);
