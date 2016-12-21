@@ -39,4 +39,13 @@ $(document).ready(function() {
       window.dancers[i].$node.animate({top: '70%'});
     }
   });
+
+  // $('.spin').click(function () {
+  //   $(this).animate({'height': '800px', 'width': '800px'});
+  // }, function () {
+  //   $(this).animate({'height': '400px', 'width': '400px'});
+  // });
+
 });
+
+
