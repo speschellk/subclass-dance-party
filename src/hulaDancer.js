@@ -9,7 +9,7 @@ MakeHulaDancer.prototype.constructor = MakeHulaDancer;
 
 MakeHulaDancer.prototype.step = function () {
   MakeDancer.prototype.step.call(this);
-  //some action
+  
   this.$node.animate({marginLeft: '+=80px'}, {duration: 500});  
   this.$node.animate({marginLeft: '-=80px'}, {duration: 500});
 };

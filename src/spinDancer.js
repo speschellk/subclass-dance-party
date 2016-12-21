@@ -5,7 +5,3 @@ var MakeSpinDancer = function(top, left, timeBetweenSteps) {
 
 MakeSpinDancer.prototype = Object.create(MakeDancer.prototype);
 MakeSpinDancer.prototype.constructor = MakeSpinDancer;
-
-// MakeSpinDancer.prototype.step = function() {
-//   MakeDancer.prototype.step.call(this);
-// };
